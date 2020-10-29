@@ -16,9 +16,10 @@ describe DockingStation do
 
   it "docks the bike to the docking station" do
     expect(subject).to respond_to(:dock)
+  end
 
   it "stores the bike when docked" do
+    bike = Bike.new
     expect(subject.dock(bike)).to eq subject.bikes
-  end
   end
 end

@@ -3,7 +3,7 @@ require './lib/bike.rb'
 class DockingStation
   attr_reader :bikes
 
-  def initialiaze
+  def initialize
     @bikes = []
   end
 
