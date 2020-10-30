@@ -2,10 +2,14 @@ require "docking_station"
 
 describe DockingStation do
 
-  it {subject.should respond_to(:release_bike)}
+#  it {subject.should respond_to(:release_bike)}
 
-  it "release_bike produces a new instance of the Bike class" do
-    expect(subject.release_bike).to be_instance_of(Bike)
+  describe '#release_bike' do
+
+    it 'raises an error when there are no bikes available' do
+      expect { subject.release_bike }.to raise_error("There are no bikes")
+    end
+
   end
 
   it {subject.release_bike.should respond_to(:working?)}
@@ -22,4 +26,6 @@ describe DockingStation do
     bike = Bike.new
     expect(subject.dock(bike)).to eq bike
   end
+
+
 end
