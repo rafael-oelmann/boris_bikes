@@ -20,6 +20,6 @@ describe DockingStation do
 
   it "stores the bike when docked" do
     bike = Bike.new
-    expect(subject.dock(bike)).to eq subject.bikes
+    expect(subject.dock(bike)).to eq bike
   end
 end
